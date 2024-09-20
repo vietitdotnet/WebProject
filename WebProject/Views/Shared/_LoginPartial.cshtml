@@ -5,6 +5,11 @@
 @inject UserManager<AppUser> UserManager
 
 <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="identity" asp-page="/role/index">
+            <i class="bi bi-person-fill-gear"></i> User
+        </a>
+    </li>
 @if (SignInManager.IsSignedIn(User))
 {
     <li class="nav-item">
