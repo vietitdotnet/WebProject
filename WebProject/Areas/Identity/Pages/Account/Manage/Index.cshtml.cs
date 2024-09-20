@@ -59,18 +59,58 @@ namespace WebProject.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            [Display(Name = "Họ")]
+            [StringLength(10, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 3)]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
+            public string LastName { get; set; }
+
+            [Display(Name = "Tên")]
+            [StringLength(50, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 3)]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
+
+            public string FirstName { get; set; }
+
+            [Display(Name = "Ngày sinh")]
+            public DateTime? BirthDate { set; get; }
+
+            [Display(Name = "Công ty")]
+            [StringLength(50, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 5)]
+            public string Company { get; set; }
+
+           
+            [Display(Name = "Quê quán")]
+            [StringLength(100, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 5)]
+            public string NativePlace { get; set; }
+
+            [StringLength(100)]
+            [Display(Name = "Địa chỉ")]
+            public string Address { get; set; }
+
+            [DataType(DataType.Text)]
+            [Display(Name = "Mô tả bản thân")]
+
+            [StringLength(350, ErrorMessage = "{0} dài tối đa {1} ký tự.")]
+            public string Description { get; set; }
         }
 
-        private async Task LoadAsync(AppUser user)
+        private async Task LoadAsync(AppUser appuser)
         {
-            var userName = await _userManager.GetUserNameAsync(user);
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var user = await _userManager.GetUserAsync(User);
 
-            Username = userName;
+            Username = user.UserName;
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                PhoneNumber = user.PhoneNumber,
+                LastName = user.LastName,
+                FirstName = user.FirstName,
+                NativePlace = user.NativePlace,
+                Company = user.Company,
+                Address = user.Address,
+                BirthDate = user.BirthDate,
+                Description = user.Description,
+
             };
         }
 
@@ -100,7 +140,7 @@ namespace WebProject.Areas.Identity.Pages.Account.Manage
                 return Page();
             }
 
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            /*var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
             if (Input.PhoneNumber != phoneNumber)
             {
                 var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
@@ -109,10 +149,25 @@ namespace WebProject.Areas.Identity.Pages.Account.Manage
                     StatusMessage = "Unexpected error when trying to set phone number.";
                     return RedirectToPage();
                 }
-            }
+            }*/
+
+            // Cập nhật các trường bổ sung
+
+            user.LastName = Input.LastName;
+            user.FirstName = Input.FirstName;
+            user.Company = Input.Company;
+            user.Address = Input.Address;
+            user.BirthDate = Input.BirthDate;
+            user.Description = Input.Description;
+
+            user.NativePlace = Input.NativePlace;
+
+            await _userManager.UpdateAsync(user);
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+
+            StatusMessage = "Hồ sơ của bạn đã cập nhật";
+
             return RedirectToPage();
         }
     }

@@ -75,16 +75,31 @@ namespace WebProject.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            /// 
+            [Display(Name = "Họ")]
+            [StringLength(20, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 3)]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
+            public string LastName { get; set; }
+
+            [Display(Name = "Tên")]
+            [StringLength(50, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 3)]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
+            public string FirstName { get; set; }
+
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
+            [Phone]
+            [Display(Name = "Số điện thoại")]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
+            public string PhoneNumber { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
             [StringLength(100, ErrorMessage = "{0} Phải dài ít nhất là {2} và tối đa {1} ký tự.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Mật khẩu")]
@@ -97,6 +112,7 @@ namespace WebProject.Areas.Identity.Pages.Account
             [DataType(DataType.Password)]
             [Display(Name = "Nhập lại mật khẩu")]
             [Compare("Password", ErrorMessage = "Mật khẩu và mật khẩu xác nhận không khớp..")]
+            [Required(ErrorMessage = "{0} không được bỏ trống")]
             public string ConfirmPassword { get; set; }
         }
 
@@ -114,8 +130,11 @@ namespace WebProject.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
+                user.PhoneNumber = Input.PhoneNumber;
+                user.LastName = Input.LastName;
+                user.FirstName = Input.FirstName;
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.PhoneNumber, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

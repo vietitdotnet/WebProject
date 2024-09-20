@@ -20,7 +20,7 @@ namespace WebProject.Entites
         public string Avartar { get; set; }
 
         [Display(Name = "Họ")]
-        [StringLength(20, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 3)]
+        [StringLength(50, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 3)]
         public string LastName { get; set; }
 
         [Display(Name = "Tên")]
@@ -39,7 +39,7 @@ namespace WebProject.Entites
         public string Description { get; set; }
 
         [Display(Name = "Quê quán")]
-        [StringLength(100, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 5)]
+        [StringLength(350, ErrorMessage = "{0} dài từ {2} đến {1} ký tự.", MinimumLength = 5)]
         public string NativePlace { get; set; }
     }
 }
