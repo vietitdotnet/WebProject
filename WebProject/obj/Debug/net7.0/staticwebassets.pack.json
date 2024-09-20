@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\WebProject.bundle.scp.css"
     },
     {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\manage.css",
+      "PackagePath": "staticwebassets\\css\\manage.css"
+    },
+    {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -260,3 +260,4 @@ D:\C#\WebProject\WebProject\obj\Debug\net7.0\ref\WebProject.dll
 D:\C#\WebProject\WebProject\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\C#\WebProject\WebProject\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\C#\WebProject\WebProject\obj\Debug\net7.0\WebProject.MvcApplicationPartsAssemblyInfo.cs
+D:\C#\WebProject\webproject\obj\Debug\net7.0\scopedcss\Areas\Identity\Pages\Shared\_LayoutUser.cshtml.rz.scp.css
