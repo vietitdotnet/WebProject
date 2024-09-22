@@ -5,16 +5,68 @@
       "PackagePath": "staticwebassets\\WebProject.bundle.scp.css"
     },
     {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\card-carousel-slider.css",
+      "PackagePath": "staticwebassets\\css\\card-carousel-slider.css"
+    },
+    {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\manage.css",
       "PackagePath": "staticwebassets\\css\\manage.css"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\multi-leve-hover.css",
+      "PackagePath": "staticwebassets\\css\\multi-leve-hover.css"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\default-img\\240501809_14126c77.webp",
+      "PackagePath": "staticwebassets\\default-img\\240501809_14126c77.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\default-img\\HINH1-247x247.jpg",
+      "PackagePath": "staticwebassets\\default-img\\HINH1-247x247.jpg"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\default-img\\ca-bop-giong-chat-luong.jpg",
+      "PackagePath": "staticwebassets\\default-img\\ca-bop-giong-chat-luong.jpg"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\default-img\\cachimtrang-hinh1-247x247.webp",
+      "PackagePath": "staticwebassets\\default-img\\cachimtrang-hinh1-247x247.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\default-img\\giong-ca-be-dung.jpg",
+      "PackagePath": "staticwebassets\\default-img\\giong-ca-be-dung.jpg"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\default-img\\giong-ca-chem-chat-luong-1.jpg",
+      "PackagePath": "staticwebassets\\default-img\\giong-ca-chem-chat-luong-1.jpg"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\default-img\\giong-ca-mu-den-chat-luong.jpg",
+      "PackagePath": "staticwebassets\\default-img\\giong-ca-mu-den-chat-luong.jpg"
+    },
+    {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\image-background\\bg_menuDropdown.png",
+      "PackagePath": "staticwebassets\\image-background\\bg_menuDropdown.png"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\image-background\\buble.png",
+      "PackagePath": "staticwebassets\\image-background\\buble.png"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\image-background\\lightTopMenu.png",
+      "PackagePath": "staticwebassets\\image-background\\lightTopMenu.png"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\js\\carousel.js",
+      "PackagePath": "staticwebassets\\js\\carousel.js"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\js\\qr.js",
@@ -291,6 +343,10 @@
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\lib\\qr-code\\qrcode.min.js",
       "PackagePath": "staticwebassets\\lib\\qr-code\\qrcode.min.js"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\logo\\logo_vi-VN.png",
+      "PackagePath": "staticwebassets\\logo\\logo_vi-VN.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebProject.Microsoft.AspNetCore.StaticWebAssets.props",

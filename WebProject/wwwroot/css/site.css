@@ -18,6 +18,16 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+   
+}
+
+.header_logo {
+    width: auto;
+    height: 60px;
+}
+
+.header-navbar-top {
+  background: url(../image-background/buble.png) no-repeat center bottom, url(../image-background/lightTopMenu.png) no-repeat center top, url(../image-background/bg_menuDropdown.png);
 }
 
