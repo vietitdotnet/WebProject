@@ -197,8 +197,8 @@ namespace WebProject.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LastName")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -207,8 +207,8 @@ namespace WebProject.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NativePlace")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(350)
+                        .HasColumnType("nvarchar(350)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -252,6 +252,184 @@ namespace WebProject.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Category", b =>
+                {
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsFeatured")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Level")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ParentCategoryID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ParentCategoryID");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Commodity", b =>
+                {
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.ToTable("Commodities");
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Product", b =>
+                {
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CategoryID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CommodityID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<decimal>("CostPrice")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Discount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsFeatured")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MinimumStock")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("SKU")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("StockQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SupplierID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.HasIndex("CommodityID");
+
+                    b.HasIndex("Slug")
+                        .IsUnique();
+
+                    b.HasIndex("SupplierID");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Supplier", b =>
+                {
+                    b.Property<string>("ID")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ContactTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Fax")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Rating")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("SupplierCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TaxID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Website")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Suppliers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -303,6 +481,53 @@ namespace WebProject.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Category", b =>
+                {
+                    b.HasOne("WebProject.Entites.Category", "ParentCategory")
+                        .WithMany("CategoryChildrens")
+                        .HasForeignKey("ParentCategoryID");
+
+                    b.Navigation("ParentCategory");
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Product", b =>
+                {
+                    b.HasOne("WebProject.Entites.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryID");
+
+                    b.HasOne("WebProject.Entites.Commodity", "Commodity")
+                        .WithMany("Products")
+                        .HasForeignKey("CommodityID");
+
+                    b.HasOne("WebProject.Entites.Supplier", "Supplier")
+                        .WithMany("Products")
+                        .HasForeignKey("SupplierID");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Commodity");
+
+                    b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Category", b =>
+                {
+                    b.Navigation("CategoryChildrens");
+
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Commodity", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("WebProject.Entites.Supplier", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

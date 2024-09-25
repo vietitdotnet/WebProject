@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link href="~/css/card-carousel-slider.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/WebProject.styles.css" asp-append-version="true" />
+    <link href="~/css/multi-leve-hover.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -36,7 +37,9 @@
                 </div>
             </div>
         </nav>
+        @await RenderSectionAsync("MultiHoverGroups", required: false)
     </header>
+    
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

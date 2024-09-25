@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\manage.css"
     },
     {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\manager.css",
+      "PackagePath": "staticwebassets\\css\\manager.css"
+    },
+    {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\multi-leve-hover.css",
       "PackagePath": "staticwebassets\\css\\multi-leve-hover.css"
     },
@@ -255,6 +259,14 @@
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\lib\\flowbite\\flowbite.min.css",
+      "PackagePath": "staticwebassets\\lib\\flowbite\\flowbite.min.css"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\lib\\flowbite\\flowbite.min.js",
+      "PackagePath": "staticwebassets\\lib\\flowbite\\flowbite.min.js"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

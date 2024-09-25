@@ -15,6 +15,7 @@ builder.Services.ConfigureMySqlContext(builder.Configuration);
 
 builder.Services.ConfigureAuthorizationHandlerService();
 
+builder.Services.AddControllers();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages().
@@ -45,16 +46,16 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-/*app.MapAreaControllerRoute(
+app.MapAreaControllerRoute(
             name: "Manager",
             pattern: "Manager/{controller}/{action}/{id?}",
             areaName: "Manager",
             defaults: new
             {
-                controller = "Product",
+                controller = "Category",
                 action = "index"
             }
-        );*/
+        );
 
 app.MapRazorPages();
 

@@ -16,10 +16,10 @@
     background-color: white
 }
 
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 10px 2px rgba(0, 0, 0, .06);
-    }
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 10px 2px rgba(0, 0, 0, .06);
+}
 
 .profile-pic {
     width: 100%;
@@ -36,13 +36,6 @@
     transition: border-radius .3s;
     background-position: center -3rem;
 }
-
-/*.card .details {
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
-}*/
 
 .card-title {
     padding-left: 20px;
@@ -99,36 +92,36 @@ justify-content: center;
     justify-content: center;
 }
 
-    .card .footer div {
-        margin-top: 1rem;
-        text-align: center;
-        margin-left: 1.2rem;
-        margin-bottom: 1.2rem;
-        padding-right: 1.2rem;
-        border-right: 1px solid rgb(0 0 0 / 40%);
-    }
+.card .footer div {
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding-right: 1.2rem;
+    border-right: 1px solid rgb(0 0 0 / 40%);
+}
 
-        .card .footer div:first-child {
-            margin-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
+.card .footer div:first-child {
+    margin-left: 1.5rem;
+    padding-right: 1.5rem;
+}
 
-        .card .footer div:last-child {
-            border-right: 0;
-            padding-right: 1.2rem;
-        }
+.card .footer div:last-child {
+    border-right: 0;
+    padding-right: 1.2rem;
+}
 
-        .card .footer div .count {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: rgb(0 0 0 / 80%);
-        }
+.card .footer div .count {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(0 0 0 / 80%);
+}
 
 .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
-    min-height: 32rem;
-    padding-top: 5rem;
+    min-height: 28rem;
+    padding-top: 1rem;
     -webkit-transform: translate3d(0, 0, 0);
 }
 
@@ -142,19 +135,19 @@ justify-content: center;
     margin-top: 0px;
 }
 
-    .owl-dots .owl-dot {
-        width: 1.8rem;
-        height: 0.8rem;
-        margin-left: 0.5rem;
-        border-radius: 50px;
-        margin-right: 0.5rem;
-        border: 2px solid #258cfb !important;
-    }
+.owl-dots .owl-dot {
+    width: 1.8rem;
+    height: 0.8rem;
+    margin-left: 0.5rem;
+    border-radius: 50px;
+    margin-right: 0.5rem;
+    border: 2px solid #258cfb !important;
+}
 
-        .owl-dots .owl-dot.active {
-            transition: all 0.3s;
-            background-color: #258cfb;
-        }
+.owl-dots .owl-dot.active {
+    transition: all 0.3s;
+    background-color: #258cfb;
+}
 
 .owl-item.active {
     display: flex;

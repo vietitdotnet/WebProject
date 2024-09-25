@@ -261,3 +261,5 @@ D:\C#\WebProject\WebProject\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dl
 D:\C#\WebProject\WebProject\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\C#\WebProject\WebProject\obj\Debug\net7.0\WebProject.MvcApplicationPartsAssemblyInfo.cs
 D:\C#\WebProject\WebProject\obj\Debug\net7.0\scopedcss\Areas\Identity\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\C#\WebProject\webproject\bin\Debug\net7.0\libman.json
+D:\C#\WebProject\webproject\obj\Debug\net7.0\scopedcss\Areas\Manager\Views\Shared\_Layout.cshtml.rz.scp.css
