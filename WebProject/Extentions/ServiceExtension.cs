@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using WebProject.DbContextLayer;
 using WebProject.Entites;
+using WebProject.FileManager;
 using WebProject.Services.CategoryService;
 using WebProject.Services.MailService;
+using WebProject.Services.ProductService;
 
 namespace WebProject.Extentions
 {
@@ -27,7 +29,8 @@ namespace WebProject.Extentions
         public static void ConfigureServiceManager(this IServiceCollection services)
         {
             services.AddSingleton<IEmailSender, EmailSender>();
-
+            services.AddSingleton<IFileService, FileService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
 
             services.Configure<IdentityOptions>(options =>

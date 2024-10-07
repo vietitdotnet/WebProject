@@ -52,7 +52,7 @@ app.MapAreaControllerRoute(
             areaName: "Manager",
             defaults: new
             {
-                controller = "Category",
+                controller = "Product",
                 action = "index"
             }
         );

@@ -5,8 +5,36 @@
       "PackagePath": "staticwebassets\\WebProject.bundle.scp.css"
     },
     {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\244818254_c4bdcff6.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\244818254_c4bdcff6.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\Image\\camera.png",
+      "PackagePath": "staticwebassets\\Image\\camera.png"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\Image\\default.jpg",
+      "PackagePath": "staticwebassets\\Image\\default.jpg"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\Image\\delete.png",
+      "PackagePath": "staticwebassets\\Image\\delete.png"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\Image\\product.jpg",
+      "PackagePath": "staticwebassets\\Image\\product.jpg"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\Image\\san-pham-ban-chay.svg",
+      "PackagePath": "staticwebassets\\Image\\san-pham-ban-chay.svg"
+    },
+    {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\card-carousel-slider.css",
       "PackagePath": "staticwebassets\\css\\card-carousel-slider.css"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\img-manager.css",
+      "PackagePath": "staticwebassets\\css\\img-manager.css"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\manage.css",
@@ -19,6 +47,10 @@
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\multi-leve-hover.css",
       "PackagePath": "staticwebassets\\css\\multi-leve-hover.css"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\search-autocomplete.css",
+      "PackagePath": "staticwebassets\\css\\search-autocomplete.css"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\site.css",
@@ -55,6 +87,10 @@
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\icon\\load.gif",
+      "PackagePath": "staticwebassets\\icon\\load.gif"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\image-background\\bg_menuDropdown.png",

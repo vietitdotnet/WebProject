@@ -11,9 +11,25 @@
     var statusMessage = TempData["StatusMessage"] as string;
 }
 
-<partial name="_MultiLevelMenuCategory" />
+@section Links {
+    @RenderSection("Links", required: false)
+}
+
+
+<div class="row">
+    <div class="col-md-8">
+        <partial name="_MultiLevelMenuCategory" />
+    </div>
+    <div class="col-md-4">
+        <partial name="_SearchPartial" />
+    </div>
+</div>
+
 
 <div>
     @RenderBody()
 </div>
 
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

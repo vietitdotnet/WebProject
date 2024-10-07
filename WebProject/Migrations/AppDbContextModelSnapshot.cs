@@ -331,7 +331,8 @@ namespace WebProject.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(135)
+                        .HasColumnType("nvarchar(135)");
 
                     b.Property<int>("Discount")
                         .HasColumnType("int");
@@ -370,6 +371,10 @@ namespace WebProject.Migrations
 
                     b.Property<string>("SupplierID")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
