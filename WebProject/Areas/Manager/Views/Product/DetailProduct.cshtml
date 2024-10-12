@@ -30,22 +30,12 @@
             <div class="personal-image">
             
                 <label asp-for="@Model.FormFile">
-                    <input accept="image/png, image/jpeg , image/jpg , image/jfif , image/webp" type="file" asp-for="@Model.FormFile" onchange="ShowImagePreview(this,indexImg )" />
+                    <input accept="image/*" type="file" asp-for="@Model.FormFile" onchange="ShowImagePreview(this,indexImg )" />
                     <figure class="personal-figure">
-                        @if (Model.Product.ImageURL is null)
-                        {
-                            <img src="~/Image/default.jpg" class="personal-avatar" alt="avatar" id="indexImg" />
-                            <figcaption class="personal-figcaption">
-                                <img src="~/Image/camera.png">
-                            </figcaption>
-                        }
-                        else
-                        {
-                            <img src="~/ImageManager/ProductImg/@Model.Product.ImageURL" class="personal-avatar" alt="avatar" id="indexImg">
-                            <figcaption class="personal-figcaption">
-                                <img src="~/Image/camera.png">
-                            </figcaption>
-                        }
+                        <img src="@Model.Product.ImageURL" class="personal-avatar" alt="avatar" id="indexImg">
+                        <figcaption class="personal-figcaption">
+                            <img src="~/Image/camera.png">
+                        </figcaption>
 
                     </figure>
                 </label>

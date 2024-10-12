@@ -94,6 +94,10 @@ namespace WebProject.Entites
         [Display(Name = "Danh mục")]
         public string CategoryID { get; set; }
 
+        [Display(Name = "Bài viết")]
+        [DataType(DataType.Text)]
+        public string Content { get; set; }
+
         [ForeignKey("CategoryID")]
         public virtual Category Category { get; set; }
 

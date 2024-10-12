@@ -26,12 +26,12 @@
     width: 100%;
 }
 
-    .navbar-below-menu li {
-        list-style: none;
-        float: left;
-        margin-left: 20px;
-        width: 100%;
-    }
+.navbar-below-menu li {
+    list-style: none;
+    float: left;
+        
+    width: 100%;
+}
 
 .navbar-below-icon {
     float: left;

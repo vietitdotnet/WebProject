@@ -1,4 +1,5 @@
-﻿using WebProject.DbContextLayer;
+﻿using WebProject.Controllers;
+using WebProject.DbContextLayer;
 
 namespace WebProject.Services
 {
@@ -7,9 +8,11 @@ namespace WebProject.Services
        
         protected readonly AppDbContext _context;
 
-        public BaseService(AppDbContext context)
+        protected readonly ILogger<BaseService> _logger;
+        public BaseService(AppDbContext context , ILogger<BaseService> logger)
         {
             _context = context;
+            _logger = logger;
         }
         
     }

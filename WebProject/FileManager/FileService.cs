@@ -107,7 +107,7 @@ namespace WebProject.FileManager
             return await task;
 
         }
-
+        
         public  string PathRepresentContentRootPath(IObjectFolder objectFolder)
         {
             if (objectFolder != null)

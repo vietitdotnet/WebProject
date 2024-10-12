@@ -4,7 +4,7 @@
     {
         public ProductSearchDTO()
         {
-            img = "/icon/load.gif";
+          
         }
         public string id { get; set; }
 

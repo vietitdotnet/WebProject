@@ -1,262 +1,52 @@
-﻿@{
+﻿@model IEnumerable<Category>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 @section Links{
 
     <link href="~/css/search-autocomplete.css" rel="stylesheet" />
+    <link href="~/css/hotline.css" rel="stylesheet" />
 }
 
 
-
- <div class="slider-box owl-carousel">
-        <div class="card">
-            <div class="header">
-            <div class="profile-pic">
-                <img src="~/default-img/cachimtrang-hinh1-247x247.webp" />
-                </div>
-            </div>
-            <div class="details">
-                <p class="profession">Cá Giống</p>
-                <h2 class="card-title">GIỐNG CÁ GÁY LÙ CHẤT LƯỢNG</h2>
-                <p class="describe">
-                    Hiệu quả mô hình nuôi giống cá mú đen. Giống cá mú đen <a href="#"> xem thêm ... </a>
-                 </p>
-                <div class="social">
-                    <i class="ri-facebook-circle-fill"></i>
-                    <i class="ri-instagram-fill"></i>
-                    @*<i class="ri-twitter-fill"></i>
-                    <i class="ri-instagram-fill"></i>
-                    <i class="ri-dribbble-fill"></i>*@
-                </div>
-            </div>
-            <div class="footer">
-              @*  <div class="followings">
-                    <p>Following</p>
-                    <p class="count">56</p>
-                </div>
-               <div class="followers">
-                    <p>Followers</p>
-                    <p class="count">1m</p>
-                </div>
-                <div class="likes">
-                    <p>Likes</p>
-                    <p class="count">1k</p>
-                </div>*@
-            </div>
-        </div>
-    <div class="card">
-        <div class="header">
-            <div class="profile-pic">
-                <img src="~/default-img/giong-ca-be-dung.jpg" />
-            </div>
-        </div>
-        <div class="details">
-            <p class="profession">Cá Giống</p>
-            <h2 class="card-title">GIỐNG CÁ GÁY LÙ CHẤT LƯỢNG</h2>
-            <p class="describe">
-                Hiệu quả mô hình nuôi giống cá mú đen. Giống cá mú đen <a href="#"> xem thêm ... </a>
-            </p>
-            <div class="social">
-                <i class="ri-facebook-circle-fill"></i>
-                <i class="ri-instagram-fill"></i>
-                @*<i class="ri-twitter-fill"></i>
-                <i class="ri-instagram-fill"></i>
-                <i class="ri-dribbble-fill"></i>*@
-            </div>
-        </div>
-        <div class="footer">
-            @*<div class="followings">
-            <p>Following</p>
-            <p class="count">98</p>
-            </div>
-            <div class="followers">
-            <p>Followers</p>
-            <p class="count">12m</p>
-            </div>
-            <div class="likes">
-            <p>Likes</p>
-            <p class="count">0.5k</p>
-            </div>*@
-        </div>
-    </div>
-        <div class="card">
-            <div class="header">
-            <div class="profile-pic">
-                <img src="~/default-img/cachimtrang-hinh1-247x247.webp" />
-            </div>
-            </div>
-            <div class="details">
-                    <p class="profession">Cá Giống</p>
-                    <h2 class="card-title">GIỐNG CÁ GÁY LÙ CHẤT LƯỢNG</h2>
-                    <p class="describe">
-                        Hiệu quả mô hình nuôi giống cá mú đen. Giống cá mú đen <a href="#"> xem thêm ... </a>
-                    </p>
-                    <div class="social">
-                        <i class="ri-facebook-circle-fill"></i>
-                        <i class="ri-instagram-fill"></i>
-                        @*<i class="ri-twitter-fill"></i>
-                        <i class="ri-instagram-fill"></i>
-                        <i class="ri-dribbble-fill"></i>*@
-                    </div>
-             </div>
-            <div class="footer">
-                @*<div class="followings">
-                    <p>Following</p>
-                    <p class="count">98</p>
-                </div>
-                <div class="followers">
-                    <p>Followers</p>
-                    <p class="count">12m</p>
-                </div>
-                <div class="likes">
-                    <p>Likes</p>
-                    <p class="count">0.5k</p>
-                </div>*@
-            </div>
-        </div>
-        <div class="card">
-            <div class="header">
-            <div class="profile-pic">
-
-                <img src="~/default-img/hinh1-247x247.jpg" />
-            </div>
-          
-            </div>
-            <div class="details">
-                <p class="profession">Cá Giống</p>
-                <h2 class="card-title">GIỐNG CÁ GÁY LÙ CHẤT LƯỢNG</h2>
-                <p class="describe">
-                    Hiệu quả mô hình nuôi giống cá mú đen. Giống cá mú đen <a href="#"> xem thêm ... </a>
-                </p>
-                <div class="social">
-                    <i class="ri-facebook-circle-fill"></i>
-                    <i class="ri-instagram-fill"></i>
-                    @*<i class="ri-twitter-fill"></i>
-                    <i class="ri-instagram-fill"></i>
-                    <i class="ri-dribbble-fill"></i>*@
-                </div>
-            </div>
-            <div class="footer">
-               @* <div class="followings">
-                    <p>Following</p>
-                    <p class="count">56</p>
-                </div>
-                <div class="followers">
-                    <p>Followers</p>
-                    <p class="count">1m</p>
-                </div>
-                <div class="likes">
-                    <p>Likes</p>
-                    <p class="count">1k</p>
-                </div>*@
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="header">
-            <div class="profile-pic">
-                <img src="~/default-img/giong-ca-mu-den-chat-luong.jpg" />
-            </div>
-            </div>
-            <div class="details">
-                <p class="profession">Cá Giống</p>
-                <h2 class="card-title">GIỐNG CÁ GÁY LÙ CHẤT LƯỢNG</h2>
-                <p class="describe">
-                    Hiệu quả mô hình nuôi giống cá mú đen. Giống cá mú đen <a href="#"> xem thêm ... </a>
-                </p>
-                <div class="social">
-                    <i class="ri-facebook-circle-fill"></i>
-                    <i class="ri-instagram-fill"></i>
-                    @*<i class="ri-twitter-fill"></i>
-                    <i class="ri-instagram-fill"></i>
-                    <i class="ri-dribbble-fill"></i>*@
-                </div>
-            </div>
-            <div class="footer">
-                @*<div class="followings">
-                    <p>Following</p>
-                    <p class="count">56</p>
-                </div>
-                <div class="followers">
-                    <p>Followers</p>
-                    <p class="count">1m</p>
-                </div>
-                <div class="likes">
-                    <p>Likes</p>
-                    <p class="count">1k</p>
-                </div>*@
-            </div>
+@foreach (var category in Model)
+{
+    @if (category.Products?.Count() > 0)
+    {
+        <div class="title-category mt-3">
+            <h6><i class="bi bi-award text-primary"></i> @category.Name</h6>
         </div>
 
-    <div class="card">
-        <div class="header">
-            <div class="profile-pic"><img src="~/default-img/giong-ca-chem-chat-luong-1.jpg" /></div>
-        </div>
-        <div class="details">
-            <p class="profession">Cá Giống</p>
-            <h2 class="card-title">GIỐNG CÁ GÁY LÙ CHẤT LƯỢNG</h2>
-            <p class="describe">
-                Hiệu quả mô hình nuôi giống cá mú đen. Giống cá mú đen <a href="#"> xem thêm ... </a>
-            </p>
-            <div class="social">
-                <i class="ri-facebook-circle-fill"></i>
-                <i class="ri-instagram-fill"></i>
-                @*<i class="ri-twitter-fill"></i>
-                <i class="ri-instagram-fill"></i>
-                <i class="ri-dribbble-fill"></i>*@
-            </div>
-        </div>
-        <div class="footer">
-            @*<div class="followings">
-                <p>Following</p>
-                <p class="count">56</p>
-            </div>
-            <div class="followers">
-                <p>Followers</p>
-                <p class="count">1m</p>
-            </div>
-            <div class="likes">
-                <p>Likes</p>
-                <p class="count">1k</p>
-            </div>*@
-        </div>
-    </div>
-    <div class="card">
-        <div class="header">
-            <div class="profile-pic"><img src="~/default-img/giong-ca-mu-den-chat-luong.jpg" /></div>
-        </div>
-        <div class="details">
-            <p class="profession">Cá Giống</p>
-            <h2 class="card-title">GIỐNG CÁ GÁY LÙ CHẤT LƯỢNG</h2>
-            <p class="describe">
-                Hiệu quả mô hình nuôi giống cá mú đen. Giống cá mú đen <a href="#"> xem thêm ... </a>
-            </p>
-            <div class="social">
-                <i class="ri-facebook-circle-fill"></i>
-                <i class="ri-instagram-fill"></i>
-                @*<i class="ri-twitter-fill"></i>
-                <i class="ri-instagram-fill"></i>
-                <i class="ri-dribbble-fill"></i>*@
-            </div>
-        </div>
-        <div class="footer">
-            @*<div class="followings">
-                <p>Following</p>
-                <p class="count">56</p>
-            </div>
-            <div class="followers">
-                <p>Followers</p>
-                <p class="count">1m</p>
-            </div>
-            <div class="likes">
-                <p>Likes</p>
-                <p class="count">1k</p>
-            </div>*@
-        </div>
-    </div>
+        @await Component.InvokeAsync("SliderBoxOwlCarouselProduct" ,category.Products)
+    }
     
- </div>
+}
+
+<div class="hotline ">
+    <div id="phonering-alo-phoneIcon" class="phonering-alo-phone phonering-alo-green phonering-alo-show">
+        <span class="number"><a href="tel:0903032767"><i class="fas fa-caret-left"></i>090.303.2767</a></span>
+        <div class="phonering-alo-ph-circle"></div>
+        <div class="phonering-alo-ph-circle-fill"></div>
+        <div class="phonering-alo-ph-img-circle ">
+            <a class="pps-btn-img" href="tel:0903032767"></a>
+        </div>
+    </div>
+</div>
+
+<div class="zalo-container right" style="bottom:20px;">
+    <a id="zalo-btn" href="https://zalo.me/0903032767" target="_blank" rel="noopener noreferrer nofollow">
+        <div class="zalo-ico zalo-has-notify">
+            <div class="zalo-ico-main">
+      
+                <img src="~/icon/zalo.png" alt="Contact Me on Zalo"/>
+            </div>
+            <em></em>
+        </div>
+    </a>
+</div>
+
 
 
 @section Scripts{
@@ -306,3 +96,5 @@
         });
     </script>
 }
+
+

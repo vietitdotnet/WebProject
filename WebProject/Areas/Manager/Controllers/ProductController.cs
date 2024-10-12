@@ -64,9 +64,23 @@ namespace WebProject.Areas.Manager.Controllers
         public async Task<IActionResult> Index([FromQuery] ProductParameters productParameter)
         {
 
-            var products = await _productService.GetProductsPaginAsync(productParameter);
+            var product = await _productService.GetProductsPaginAsync(productParameter);
 
-            return View(products);
+            foreach (var item in product.Products)
+            {
+                if (item.ImageURL is null)
+                {
+                    item.ImageURL = "/Image/default.jpg";
+                }
+                else
+                {
+                    item.ImageURL = _fileService.HttpContextAccessorPathImgSrcIndex(ProductImg.GetProductImg(), item.ImageURL);
+                }
+               
+            }
+
+
+            return View(product);
         }
 
         [HttpGet]
@@ -173,6 +187,15 @@ namespace WebProject.Areas.Manager.Controllers
                 return NotFound("Không tìm thấy sản phẩm");
             }
 
+            if (input.Product?.ImageURL is null)
+            {
+                input.Product.ImageURL = "/Image/default.jpg";
+            }
+            else
+            {
+                input.Product.ImageURL = _fileService.HttpContextAccessorPathImgSrcIndex(ProductImg.GetProductImg(), input.Product.ImageURL);
+            }
+          
             return View("DetailProduct", input);
         }
 
@@ -301,7 +324,7 @@ namespace WebProject.Areas.Manager.Controllers
                 product.MinimumStock = productUpdate.MinimumStock;
 
                 product.StockQuantity = productUpdate.StockQuantity;
-
+                product.Content = productUpdate.Content;
                 product.IsActive = productUpdate.IsActive;
 
                 product.IsFeatured = productUpdate.IsFeatured;

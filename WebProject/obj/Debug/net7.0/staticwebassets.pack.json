@@ -5,8 +5,36 @@
       "PackagePath": "staticwebassets\\WebProject.bundle.scp.css"
     },
     {
-      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\244818254_c4bdcff6.webp",
-      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\244818254_c4bdcff6.webp"
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\240534059_c07cea2a.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\240534059_c07cea2a.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\240632063_0b7396c8.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\240632063_0b7396c8.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\240747735_42bdaecb.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\240747735_42bdaecb.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\242102886_75de25fe.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\242102886_75de25fe.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\242850179_8a0374a2.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\242850179_8a0374a2.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\242923687_0bee92d7.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\242923687_0bee92d7.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\243502457_190f4ec4.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\243502457_190f4ec4.webp"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\ImageManager\\ProductImg\\244222091_4c11dad2.webp",
+      "PackagePath": "staticwebassets\\ImageManager\\ProductImg\\244222091_4c11dad2.webp"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\Image\\camera.png",
@@ -31,6 +59,10 @@
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\card-carousel-slider.css",
       "PackagePath": "staticwebassets\\css\\card-carousel-slider.css"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\hotline.css",
+      "PackagePath": "staticwebassets\\css\\hotline.css"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\css\\img-manager.css",
@@ -93,6 +125,10 @@
       "PackagePath": "staticwebassets\\icon\\load.gif"
     },
     {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\icon\\zalo.png",
+      "PackagePath": "staticwebassets\\icon\\zalo.png"
+    },
+    {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\image-background\\bg_menuDropdown.png",
       "PackagePath": "staticwebassets\\image-background\\bg_menuDropdown.png"
     },
@@ -111,6 +147,10 @@
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\js\\qr.js",
       "PackagePath": "staticwebassets\\js\\qr.js"
+    },
+    {
+      "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\js\\shared-facebook.js",
+      "PackagePath": "staticwebassets\\js\\shared-facebook.js"
     },
     {
       "Id": "D:\\C#\\WebProject\\webproject\\wwwroot\\js\\site.js",

@@ -9,7 +9,7 @@ namespace WebProject.Services.ProductService
 {
     public class ProductService : BaseService, IProductService
     {
-        public ProductService(AppDbContext context) : base(context)
+        public ProductService(AppDbContext context, ILogger<BaseService> logger) : base(context, logger)
         {
         }
 

@@ -83,6 +83,9 @@ namespace WebProject.Dto
         [Display(Name = "Ngày cập nhật")]
         public DateTime UpdatedDate { get; set; }
 
+        [Display(Name = "Bài viết")]
+        public string Content { get; set; }
+
         [Display(Name = "Danh mục")]
         public string CategoryID { get; set; }
 

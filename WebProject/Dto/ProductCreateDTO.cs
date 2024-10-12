@@ -83,6 +83,10 @@ namespace WebProject.Dto
         [SlugValidation]
         public string Slug { get; set; }
 
+        [Display(Name = "Bài viết")]
+        
+        public string Content { get; set; }
+
         [Display(Name = "Ngày tạo")]
         public DateTime CreatedDate { get; set; }
 

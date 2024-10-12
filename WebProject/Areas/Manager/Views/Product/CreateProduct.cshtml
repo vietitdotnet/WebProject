@@ -6,8 +6,26 @@
     var SeleteCategorys = ViewData["SeleteCaterorys"] as List<Category>;
 }
 
-<div class="container form-manager">
-    <form method="post" class="max-w-md mx-auto">
+@section Links {
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+}
+
+@section Breadcrumb{
+
+
+    <li aria-current="page">
+        <div class="flex items-center">
+            <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">@ViewData["Title"]</span>
+        </div>
+    </li>
+}
+
+
+<div class=" form-manager">
+    <form method="post">
         
         <div class="grid md:grid-cols-2 md:gap-6">
             <div class="relative z-0 w-full mb-5 group">
@@ -96,6 +114,18 @@
 
         </div>
 
+        <div class="">
+            <label asp-for="@Model.Description" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mô tả</label>
+            <textarea asp-for="@Model.Description" rows="3" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Mô tả đối da 135 kí tự..."></textarea>
+        </div>
+        <div class="mt-3">
+            <label for="editor">Bài viết</label>
+            <!-- Quill Editor -->
+            <div id="editor" style="height: 200px;"></div>
+            <!-- Hidden Textarea to submit content -->
+            <textarea id="Content" asp-for="@Model.Content" name="Content" style="display:none;"></textarea>
+        </div>
+
         <div class="flex items-center p-3">
             <label class="block text-sm font-medium text-gray-900 dark:text-white">Cờ nổi bật :</label>
             <div class="mx-2">
@@ -114,7 +144,6 @@
 
         </div>
 
-
  
         <button type="submit" class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Tạo</button>
         <a asp-action="index" asp-controller="product" class="px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Về danh sách</a>
@@ -128,4 +157,32 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <!-- Include the Quill library -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+    <!-- Initialize Quill editor -->
+    <script>
+        // Khởi tạo Quill Editor
+        var quill = new Quill('#editor', {
+            theme: 'snow', // Giao diện mặc định, có thể chọn 'bubble'
+            placeholder: 'Nhập nội dung của bạn...',
+            modules: {
+                toolbar: [
+                    [{ 'header': [1, 2, false] }],
+                    ['bold', 'italic', 'underline'],
+                    ['link', 'image'],
+                    [{ 'list': 'ordered' }, { 'list': 'bullet' }]
+                ]
+            }
+        });
+
+        // Lấy form của bạn (giả sử form có id là 'formId')
+        var form = document.querySelector('form');
+
+        // Khi form được gửi, đồng bộ nội dung của Quill với textarea
+        form.onsubmit = function () {
+            var content = document.querySelector('textarea[name=Content]');
+            content.value = quill.root.innerHTML; // Gán nội dung HTML từ Quill vào textarea
+        };
+    </script>
 }
